@@ -1,0 +1,2 @@
+class FakeOptions():
+    pass

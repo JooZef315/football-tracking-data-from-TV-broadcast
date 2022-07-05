@@ -1,0 +1,3 @@
+venv/
+2D_projection/pretrained_weights/pretrained_init_guess/*
+2D_projection/pretrained_weights/pretrained_loss_surface/*
