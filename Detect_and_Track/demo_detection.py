@@ -25,5 +25,5 @@ def detect_demo(path   = "../Data/Capture.JPG"):
     print(player)
     cv2.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
 
+    return res
 
-detect_demo()

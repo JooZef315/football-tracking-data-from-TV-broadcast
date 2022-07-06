@@ -22,5 +22,3 @@ def demo_mapping(img_path = '../Data/Capture.JPG'):
     print(f'the 2D projection matrix is: {optim_homography.cpu()}')
     visualize_overlaying(norm_frame, pitch_path, optim_homography)
 
-
-demo_mapping()
