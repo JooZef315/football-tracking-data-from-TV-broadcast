@@ -2,8 +2,9 @@ import cv2
 import random
 import colorsys
 import numpy as np
-from configs import YOLO_COCO_CLASSES
- 
+
+YOLO_COCO_CLASSES = "model_data/coco/coco.names"
+
 def read_class_names(class_file_name):
     # loads class name from a file
     names = {}

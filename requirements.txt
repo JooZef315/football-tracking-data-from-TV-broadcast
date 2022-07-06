@@ -1,0 +1,26 @@
+numpy
+scipy
+pandas
+matplotlib
+imageio
+Pillow
+opencv-python==4.1.2.30
+PyYAML
+torch==1.11 --extra-index-url https://download.pytorch.org/whl/cu113
+torchvision==0.12
+torchaudio==0.11
+tensorflow==2.3.1
+tensorflow-gpu==2.3.1
+tqdm==4.43.0
+requests
+protobuf<4.21.3
+wget
+awscli
+urllib3
+mss
+scikit-learn==0.19.2 
+ipython
+pycopy-errno
+pycopy-colorsys
+tables
+kornia
