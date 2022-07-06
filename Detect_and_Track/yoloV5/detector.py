@@ -2,8 +2,9 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import cv2
 import numpy as np
-from utils import *
-from configs import *
+from .utils import *
+
+YOLO_COCO_CLASSES = "../model_data/coco/coco.names"
 
 def detectXl5(model ,image_path, show=True):
     '''
