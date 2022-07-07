@@ -20,8 +20,10 @@ def initialize_model():
     opt.goal_image_path = './Data/Capture.JPG'
     opt.guess_model = 'init_guess'
     opt.homo_param_method = 'deep_homography'
-    opt.load_weights_error_model = '/pretrained_loss_surface'
-    opt.load_weights_upstream = '/pretrained_init_guess'
+    # opt.load_weights_error_model = '/pretrained_loss_surface'
+    # opt.load_weights_upstream = '/pretrained_init_guess'
+    opt.load_weights_error_model = '/content/drive/MyDrive/GP/out/pretrained_loss_surface'
+    opt.load_weights_upstream = '/content/drive/MyDrive/GP/out/pretrained_init_guess'
     opt.lr_optim = 1e-5
     opt.need_single_image_normalization = True
     opt.need_spectral_norm_error_model = True
