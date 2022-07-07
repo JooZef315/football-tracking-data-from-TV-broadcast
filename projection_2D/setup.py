@@ -34,7 +34,7 @@ def initialize_model():
     opt.optim_method = 'stn'
     opt.optim_type = 'adam'
     # opt.out_dir = './projection_2D/pretrained_weights/out'
-    opt.out_dir = '/content/drive/MyDrive/GP/out'
+    opt.out_dir = '/content/drive/MyDrive/GP/out/'
     opt.prevent_neg = 'sigmoid'
     opt.template_path = './projection_2D/data/pitch_template.png'
     opt.warp_dim = 8
