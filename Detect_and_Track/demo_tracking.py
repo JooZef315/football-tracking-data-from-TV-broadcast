@@ -41,7 +41,7 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
         for t in t10:
             x.append([round(b) for b in t])
 
-        xx = [xx for xx in x if xx[4] == 6][0]
+        xx = [xx for xx in x if xx[4] == 1][0]
         # cv2.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
         plt.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  :])
         plt.show()
