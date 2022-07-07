@@ -3,6 +3,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import cv2
 import numpy as np
 from .utils import *
+import matplotlib.pyplot as plt
 
 YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
 
@@ -43,7 +44,8 @@ def detectXl5(model ,image_path, show=True):
     if show:
       # Show the image
       image = draw_bbox(original_image, bboxes, CLASSES=YOLO_COCO_CLASSES, rectangle_colors=(255,0,0))  
-      cv2.imshow(image[:, :, ::-1])
+      # cv2.imshow(image[:, :, ::-1])
+      plt.show(image[:, :, ::-1])
     else:      
       image =  original_image    
     
