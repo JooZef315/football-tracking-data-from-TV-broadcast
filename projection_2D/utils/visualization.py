@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import imageio
-from utils import torch_img_to_np_img, np_img_to_torch_img
-from warp import warp_image
+from .utils import torch_img_to_np_img, np_img_to_torch_img
+from .warp import warp_image
 
 
 def visualize_overlaying(frame_draw, pitch_path, model):

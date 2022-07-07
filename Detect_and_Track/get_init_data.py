@@ -1,6 +1,6 @@
 import pandas as pd
-from init_dataframe.create_df import creatInitDataFrame
-from get_tracks import get_video_tracks
+from .init_dataframe.create_df import creatInitDataFrame
+from .get_tracks import get_video_tracks
 
 def get_init_data(path, out_name, teams_colors):
     '''
@@ -25,6 +25,6 @@ def get_init_data(path, out_name, teams_colors):
     init_df = creatInitDataFrame(zitboxes, ziframes, teams_colors)
 
     #save the initial dataframe
-    init_df.to_csv(f'../Out/{out_name}_init_df.csv', index=False)
+    init_df.to_csv(f'./Out/{out_name}_init_df.csv', index=False)
 
     return init_df

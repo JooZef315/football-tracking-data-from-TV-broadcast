@@ -1,9 +1,9 @@
 import imageio
-from utils.pitch import *
-from utils.visualization import *
-from setup import initialize_model
+from .utils.pitch import *
+from .utils.visualization import *
+from .setup import initialize_model
 
-def demo_mapping(img_path = '../Data/Capture.JPG'):
+def demo_mapping(img_path = './Data/Capture.JPG'):
     '''
     this functions is to make a test case on a single image.
 

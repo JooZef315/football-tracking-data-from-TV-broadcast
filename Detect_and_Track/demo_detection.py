@@ -2,7 +2,7 @@ import cv2
 from .yoloV5.load_models import yoloV5l
 from .yoloV5.detector import detectXl5
 
-def detect_demo(path   = "../Data/Capture.JPG"):
+def detect_demo(path   = "./Data/Capture.JPG"):
     '''
     this functions is to apply detection on an image.
 

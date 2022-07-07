@@ -1,8 +1,8 @@
 import pandas as pd
-from mapping import get_frames_from_video, create_MappingDataFrame
-from utils.visualization import visualize_mapping
+from .mapping import get_frames_from_video, create_MappingDataFrame
+from .utils.visualization import visualize_mapping
 
-def get_tracking_data(df_path, tracked_video_path, out_name, pitch_path = './data/pitch_template.png', test = False):
+def get_tracking_data(df_path, tracked_video_path, out_name, pitch_path = './projection_2D/data/pitch_template.png', test = False):
     '''
     this functions is to create the finial tracking data dataframe
 
@@ -41,6 +41,6 @@ def get_tracking_data(df_path, tracked_video_path, out_name, pitch_path = './dat
         visualize_mapping(test_frame, pitch_path, test_frame_init_df, test_frame_mapped_df, annotation = True)
 
     #save the final dataframe
-    df_mapped.to_csv(f'../Out/{out_name}_df_mapped.csv', index=False)
+    df_mapped.to_csv(f'./Out/{out_name}_df_mapped.csv', index=False)
 
     return df_mapped

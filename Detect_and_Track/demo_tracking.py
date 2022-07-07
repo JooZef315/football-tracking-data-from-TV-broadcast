@@ -1,7 +1,7 @@
 import cv2
-from get_tracks import get_video_tracks
+from .get_tracks import get_video_tracks
 
-def track_demo(video_path = "../Data/benz.mp4" , out_name = 'benz'):
+def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
     '''
     this functions is to apply tracking on a video, and track certain player within 10 frames
 

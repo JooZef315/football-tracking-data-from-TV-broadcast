@@ -3,11 +3,11 @@ import cv2
 import matplotlib.pyplot as plt
 import imageio
 from PIL import Image
-from utils import  np_img_to_torch_img
-from image_utils import normalize_single_image, rgb_template_to_coord_conv_template
+from .utils import  np_img_to_torch_img
+from .image_utils import normalize_single_image, rgb_template_to_coord_conv_template
 
 
-def initialize_MappingPitch(pitch_path = '../data/pitch_template.png', viz = True):
+def initialize_MappingPitch(pitch_path = './projection_2D/data/pitch_template.png', viz = True):
     '''
     this functions is to preprocess normalize the pitch image to use it.
 

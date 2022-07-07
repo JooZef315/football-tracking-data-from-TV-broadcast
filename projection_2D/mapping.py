@@ -2,9 +2,9 @@ import time
 import cv2
 import torch
 import pandas as pd
-from utils.pitch import *
-from utils.visualization import *
-from setup import initialize_model
+from .utils.pitch import *
+from .utils.visualization import *
+from .setup import initialize_model
 
 e2e = initialize_model()
 
@@ -77,7 +77,7 @@ def apply_projection_matrix(matrix, pointX, pointY):
 
 
 
-def create_MappingDataFrame(df, video_path, pitch_path = './data/pitch_template.png', viz = False): 
+def create_MappingDataFrame(df, video_path, pitch_path = './projection_2D/data/pitch_template.png', viz = False): 
     '''
     this functions is to create the finial tracking data dataframe
 

@@ -1,10 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from init_dataframe.create_df import creatInitDataFrame
-from yoloV5.load_models import yoloV5l
-from yoloV5.detector import detectXl5
+from .init_dataframe.create_df import creatInitDataFrame
+from .yoloV5.load_models import yoloV5l
+from .yoloV5.detector import detectXl5
 
-def init_df_demo(path = "../Data/Capture.JPG"):
+def init_df_demo(path = "./Data/Capture.JPG", colors = []):
   '''
   this functions is to create an initial unmapped dataframe demo on a single frame/ image, 
   and plot the detected objects in the image.
@@ -17,7 +17,7 @@ def init_df_demo(path = "../Data/Capture.JPG"):
   image_path = path
   modelV5l, _ = yoloV5l()
   img ,detections = detectXl5(modelV5l, image_path, False)
-  init_df = creatInitDataFrame([detections], [img], frame_colors = ['white', 'blue', 'green', None, 'white'])
+  init_df = creatInitDataFrame([detections], [img], frame_colors = colors)
   init_df = init_df.reset_index(drop=True)
 
   plt.figure(figsize=(12, 8))

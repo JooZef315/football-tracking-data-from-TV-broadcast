@@ -1,9 +1,9 @@
-from deep_sort.tracker_implementation import trackingXl5
-from deep_sort.tracks_cleaning import clean_tracks
-from deep_sort.tracking_video import make_tracking_video
-from yoloV5.load_models import yoloV5l
+from .deep_sort.tracker_implementation import trackingXl5
+from .deep_sort.tracks_cleaning import clean_tracks
+from .deep_sort.tracking_video import make_tracking_video
+from .yoloV5.load_models import yoloV5l
 
-def get_video_tracks(video_path = "../Data/benz.mp4" , out_name = 'benz'):   
+def get_video_tracks(video_path = "./Data/benz.mp4" , out_name = 'benz'):   
     '''
     this functions is to implement tracking players and the ball in the video.
 
@@ -29,7 +29,7 @@ def get_video_tracks(video_path = "../Data/benz.mp4" , out_name = 'benz'):
     ziframes, zitboxes = clean_tracks(iframes, itboxes, True)
    
     #make plain video
-    make_tracking_video(ziframes, zitboxes, f'../Out/{out_name}_out.mp4', fps, draw = False)
+    make_tracking_video(ziframes, zitboxes, f'./Out/{out_name}_out.mp4', fps, draw = False)
 
     #make video with objects tracked
     make_tracking_video(ziframes, zitboxes, f'../Out/{out_name}_out_tracked.mp4', fps, draw = True)

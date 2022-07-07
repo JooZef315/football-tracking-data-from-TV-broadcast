@@ -1,6 +1,6 @@
 import pandas as pd
-from teams_classification import classify_teams
-from players_positions import get_positions
+from .teams_classification import classify_teams
+from .players_positions import get_positions
 
 def creatInitDataFrame(tracks, frames, frame_colors = None):  
   '''
