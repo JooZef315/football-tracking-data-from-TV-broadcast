@@ -20,5 +20,5 @@ def demo_mapping(img_path = './Data/Capture.JPG'):
     e2e = initialize_model()
     _, optim_homography = e2e.optim(norm_frame[None], pitch)
     print(f'the 2D projection matrix is: {optim_homography.cpu()}')
-    visualize_overlaying(norm_frame, pitch_path, optim_homography)
+    visualize_overlaying(frame, pitch_path, optim_homography)
 
