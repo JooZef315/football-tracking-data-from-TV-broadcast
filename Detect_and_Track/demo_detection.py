@@ -13,16 +13,16 @@ def detect_demo(path   = "./Data/Capture.JPG"):
     '''
    
     modeli , ball_model = yoloV5l()
-    img, res = detectXl5(modeli, path, show=False)
+    img, res = detectXl5(modeli, path, show=True)
     print(f'bounding boxes: {res}')
 
-    ball_img, ball_res = detectXl5(ball_model, path, show=False)
+    ball_img, ball_res = detectXl5(ball_model, path, show=True)
     print(ball_res)
 
     #show one player
     player = res[5]
     print(f'player with index 5: {player}')
-    # cv2.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
+    cv2.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
 
     return img, res
 
