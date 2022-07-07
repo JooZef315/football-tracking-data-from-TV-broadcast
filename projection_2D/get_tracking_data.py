@@ -25,7 +25,7 @@ def get_tracking_data(df_path, tracked_video_path, out_name, pitch_path = './pro
         the final mapped dataframe.  
     '''
     df = pd.read_csv(df_path)
-    print(df.heead())    
+    print(df.head())    
     mapped_frames = get_frames_from_video(tracked_video_path)    
     df_mapped = create_MappingDataFrame(df, tracked_video_path, pitch_path, viz = True)
     print(df_mapped.head())
