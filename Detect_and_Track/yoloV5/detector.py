@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from .utils import *
 
-YOLO_COCO_CLASSES = "./model_data/coco/coco.names"
+YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
 
 def detectXl5(model ,image_path, show=True):
     '''

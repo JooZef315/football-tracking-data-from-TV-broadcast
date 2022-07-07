@@ -2,7 +2,7 @@ import cv2
 import time
 from .utils import draw_bbox
 
-YOLO_COCO_CLASSES = "./model_data/coco/coco.names"
+YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
 
 def make_tracking_video(frames, tboxes, output_path, fps, draw = True):
   '''

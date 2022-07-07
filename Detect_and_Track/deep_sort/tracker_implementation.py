@@ -10,7 +10,7 @@ from .tracker import Tracker
 from .generate_detections import create_box_encoder
 # import generate_detections as gdet
 
-YOLO_COCO_CLASSES = "./model_data/coco/coco.names"
+YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
 
 def trackingXl5(Yolo_model, ball_model, video_path):
     '''

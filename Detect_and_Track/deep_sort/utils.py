@@ -3,7 +3,7 @@ import random
 import colorsys
 import numpy as np
 
-YOLO_COCO_CLASSES = "./model_data/coco/coco.names"
+YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
 
 def read_class_names(class_file_name):
     # loads class name from a file
