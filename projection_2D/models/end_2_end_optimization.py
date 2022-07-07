@@ -8,8 +8,8 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from models import end_2_end_optimization_helper, loss_surface
-from utils import utils, warp
+from . import end_2_end_optimization_helper, loss_surface
+from ..utils import utils, warp
 
 
 class End2EndOptimFactory(object):

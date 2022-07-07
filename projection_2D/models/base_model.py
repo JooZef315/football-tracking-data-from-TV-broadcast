@@ -6,7 +6,7 @@ import abc
 
 import torch
 
-from utils import utils
+from ..utils import utils
 
 
 class BaseModel(abc.ABC):

@@ -7,8 +7,8 @@ from argparse import Namespace
 
 import torch
 
-from models import base_model, resnet
-from utils import utils
+from . import base_model, resnet
+from ..utils import utils
 
 
 class InitialGuesserFactory(object):

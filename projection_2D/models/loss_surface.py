@@ -9,8 +9,8 @@ from argparse import Namespace
 import torch
 import torch.nn.functional as F
 
-from models import base_model, resnet
-from utils import utils
+from . import base_model, resnet
+from ..utils import utils
 
 
 class ErrorModelFactory():
