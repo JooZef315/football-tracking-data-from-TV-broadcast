@@ -1,7 +1,6 @@
 import cv2
 from .yoloV5.load_models import yoloV5l
 from .yoloV5.detector import detectXl5
-import matplotlib.pyplot as plt
 
 def detect_demo(path   = "./Data/Capture.JPG"):
     '''
@@ -24,9 +23,7 @@ def detect_demo(path   = "./Data/Capture.JPG"):
     #show one player
     player = res[5]
     print(f'player with index 5: {player}')
-    # cv2.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
-    plt.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, :])
-    plt.show()
+    cv2_imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
 
     return res
 
