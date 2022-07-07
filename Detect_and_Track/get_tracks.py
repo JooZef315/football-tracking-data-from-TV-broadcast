@@ -32,7 +32,7 @@ def get_video_tracks(video_path = "./Data/benz.mp4" , out_name = 'benz'):
     make_tracking_video(ziframes, zitboxes, f'./Out/{out_name}_out.mp4', fps, draw = False)
 
     #make video with objects tracked
-    make_tracking_video(ziframes, zitboxes, f'../Out/{out_name}_out_tracked.mp4', fps, draw = True)
+    make_tracking_video(ziframes, zitboxes, f'./Out/{out_name}_out_tracked.mp4', fps,draw = True)
 
     return ziframes, zitboxes
 

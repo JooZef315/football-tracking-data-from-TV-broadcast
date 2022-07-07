@@ -14,28 +14,28 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
         the name to save the video with objects tracked with.   . 
     '''
 
-    iframes, itboxes = get_video_tracks(video_path, out_name = out_name, vid_draw = True)
+    iframes, itboxes = get_video_tracks(video_path, out_name = out_name)
     plt.figure(figsize=(12, 8))
-    frmae_num = 30
+    frame_num = 30
     print(len(itboxes))
     print(len(iframes))
-    print(iframes[frmae_num].shape)
-    # cv2.imshow(iframes[frmae_num][:,:,::-1])
-    plt.imshow(iframes[frmae_num])
+    print(iframes[frame_num].shape)
+    # cv2.imshow(iframes[frame_num][:,:,::-1])
+    plt.imshow(iframes[frame_num])
     plt.show()
     
-    t10 = itboxes[frmae_num]
+    t10 = itboxes[frame_num]
     x = []
     for t in t10:
         x.append([round(b) for b in t])
 
     print(x)
     xx = x[2]
-    # cv2.imshow(iframes[frmae_num][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
-    plt.imshow(iframes[frmae_num][xx[1]:xx[3],xx[0]:xx[2],  :])
+    # cv2.imshow(iframes[frame_num][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
+    plt.imshow(iframes[frame_num][xx[1]:xx[3],xx[0]:xx[2],  :])
     plt.show()
 
-    for i in range(frmae_num, frmae_num + 10):
+    for i in range(frame_num, frame_num + 10):
         t10 = itboxes[i]
         x = []
         for t in t10:
