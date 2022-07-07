@@ -46,6 +46,7 @@ def detectXl5(model ,image_path, show=True):
       image = draw_bbox(original_image, bboxes, CLASSES=YOLO_COCO_CLASSES, rectangle_colors=(255,0,0))  
       # cv2.imshow(image[:, :, ::-1])
       plt.imshow(image)
+      plt.show()
     else:      
       image =  original_image    
     

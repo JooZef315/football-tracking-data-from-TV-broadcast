@@ -26,6 +26,7 @@ def detect_demo(path   = "./Data/Capture.JPG"):
     print(f'player with index 5: {player}')
     # cv2.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, ::-1])
     plt.imshow(img[player[1] - 30:player[3] + 30, player[0] - 30 :player[2] + 30, :])
+    plt.show()
 
     return res
 
