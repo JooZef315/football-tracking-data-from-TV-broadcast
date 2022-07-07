@@ -46,7 +46,7 @@ def trackingXl5(Yolo_model, ball_model, video_path):
     nn_budget = None
     
     #initialize deep sort object
-    model_filename = 'model_data/mars-small128.pb'
+    model_filename = './Detect_and_Track/model_data/mars-small128.pb'
     encoder = create_box_encoder(model_filename, batch_size=1)
     metric = NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
     tracker = Tracker(metric)
