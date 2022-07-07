@@ -100,13 +100,13 @@ def create_MappingDataFrame(df, video_path, pitch_path = './projection_2D/data/p
 
     start_time =  time.time()
     frames = get_frames_from_video(video_path)
-    print(f'length of frames: {len(frames)}') 
     print(f'length of the dataframe to map: {len(df)}') 
+    print(f'length of frames: {len(frames)}') 
 
     df = df[df['frame'] % 5 == 0]
 
     frames_idx = df['frame'].unique().tolist()
-    print(f'frames_idx: {frames_idx}')
+    print(f'frames to map: {frames_idx}')
     print(f'number of frames to map: {len(frames_idx)}')
     projection_matrices = []
 
@@ -118,8 +118,9 @@ def create_MappingDataFrame(df, video_path, pitch_path = './projection_2D/data/p
         _, mapping_model = e2e.optim(initFrame[None], pitch, refresh = True)
         projection_matrices.append(mapping_model.cpu())
     
-    if viz:      
-      visualize_overlaying(frame, pitch_path, mapping_model)
+        if viz:      
+            visualize_overlaying(frame, pitch_path, mapping_model)
+            
     print(f'\n ---------- time to calculate transformation matrices : {round((time.time() - start_time) / 60, 2)} min ---------- \n')
 
     #apply the homography model on x, y
