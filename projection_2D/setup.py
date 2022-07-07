@@ -6,7 +6,7 @@ from .options import fake_options
 def initialize_model():
     # if want to run on CPU,  make it False
     print(f'cuda: {constant_var.HAS_CUDA}')
-    constant_var.USE_CUDA = False
+    constant_var.USE_CUDA = True
     utils.fix_randomness()
 
     # if GPU is RTX 20XX, disable cudnn
