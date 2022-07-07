@@ -6,7 +6,7 @@ from .options import fake_options
 def initialize_model():
     # if want to run on CPU,  make it False
     print(f'cuda: {constant_var.HAS_CUDA}')
-    constant_var.USE_CUDA = True
+    constant_var.USE_CUDA = False
     utils.fix_randomness()
 
     # if GPU is RTX 20XX, disable cudnn
@@ -23,8 +23,6 @@ def initialize_model():
     opt.homo_param_method = 'deep_homography'
     opt.load_weights_error_model = './pretrained_loss_surface'
     opt.load_weights_upstream = './pretrained_init_guess'
-    # opt.load_weights_error_model = '/content/drive/MyDrive/GP/out/pretrained_loss_surface'
-    # opt.load_weights_upstream = '/content/drive/MyDrive/GP/out/pretrained_init_guess'
     opt.lr_optim = 1e-5
     opt.need_single_image_normalization = True
     opt.need_spectral_norm_error_model = True
@@ -33,7 +31,7 @@ def initialize_model():
     opt.optim_iters = 200
     opt.optim_method = 'stn'
     opt.optim_type = 'adam'
-    # opt.out_dir = './projection_2D/pretrained_weights/out'
+    # opt.out_dir = './projection_2D/pretrained_weights/out/'
     opt.out_dir = '/content/drive/MyDrive/GP/out/'
     opt.prevent_neg = 'sigmoid'
     opt.template_path = './projection_2D/data/pitch_template.png'
