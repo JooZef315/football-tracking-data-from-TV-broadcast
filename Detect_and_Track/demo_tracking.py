@@ -1,4 +1,5 @@
 import cv2
+import matplotlib.pyplot as plt
 from .get_tracks import get_video_tracks
 
 def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
@@ -38,4 +39,6 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
 
         xx = [xx for xx in x if xx[4] == 6][0]
         cv2.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
+        plt.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  :])
+        plt.show() 
 

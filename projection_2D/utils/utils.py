@@ -1,9 +1,7 @@
 '''utils functions, variables
 '''
-
 import random
 
-import readline
 import numpy as np
 import torch
 try:
@@ -11,7 +9,8 @@ try:
 except ModuleNotFoundError:
     pass
 
-from utils import constant_var
+from . import constant_var
+# from utils import constant_var
 
 
 def confirm(question='OK to continue?'):
