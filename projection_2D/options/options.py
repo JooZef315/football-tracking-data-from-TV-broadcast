@@ -43,7 +43,7 @@ def set_data_arguments(parser):
     data_arg.add_argument('--coord_conv_template', type=str2bool,
                           default=True, help='replace redundant channels tp XY grids')
     data_arg.add_argument('--template_path', type=str,
-                          default='./data/pitch_template.png', help='playfield template image')
+                          default='./projection_2D/data/pitch_template.png', help='playfield template image')
     data_arg.add_argument('--need_single_image_normalization', type=str2bool,
                           default=True, help='normalize a single image')
 

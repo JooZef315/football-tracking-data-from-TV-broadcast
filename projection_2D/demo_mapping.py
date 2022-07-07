@@ -13,7 +13,7 @@ def demo_mapping(img_path = './Data/Capture.JPG'):
         the path of the directory of the image to process.
     '''
 
-    pitch_path = './data/pitch_template.png'
+    pitch_path = './projection_2D/data/pitch_template.png'
     pitch = initialize_MappingPitch(pitch_path, viz = True)
     frame = imageio.imread(img_path, pilmode='RGB')
     norm_frame = initialize_MappingFrame(frame, viz = True)
