@@ -71,7 +71,7 @@ get_init_data(path,out_name,teams_colors)
 #the output video with players and ball tracked, and  the intial dataframe would be saved in Out/
 #use them as arguments to get_tracking_data function, to generate the final tracking data dataframe
 
-get_tracking_data(df_path, tracked_video_path, out_name)
+tracked_frames, bboxes = get_tracking_data(df_path, tracked_video_path, out_name)
 #the output the intial dataframe with players and ball tracked and mapped to 2D pitch would be saved in Out/ too.
 ```
 
