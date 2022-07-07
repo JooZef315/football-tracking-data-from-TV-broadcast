@@ -1,4 +1,4 @@
-import cv2
+# import cv2
 import matplotlib.pyplot as plt
 from .get_tracks import get_video_tracks
 
@@ -15,13 +15,15 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
     '''
 
     iframes, itboxes = get_video_tracks(video_path, out_name = out_name, vid_draw = True)
-
+    plt.figure(figsize=(12, 8))
     frmae_num = 30
     print(len(itboxes))
     print(len(iframes))
     print(iframes[frmae_num].shape)
-    cv2.imshow(iframes[frmae_num][:,:,::-1])
-
+    # cv2.imshow(iframes[frmae_num][:,:,::-1])
+    plt.imshow(iframes[frmae_num])
+    plt.show()
+    
     t10 = itboxes[frmae_num]
     x = []
     for t in t10:
@@ -29,7 +31,9 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
 
     print(x)
     xx = x[2]
-    cv2.imshow(iframes[frmae_num][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
+    # cv2.imshow(iframes[frmae_num][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
+    plt.imshow(iframes[frmae_num][xx[1]:xx[3],xx[0]:xx[2],  :])
+    plt.show()
 
     for i in range(frmae_num, frmae_num + 10):
         t10 = itboxes[i]
@@ -38,7 +42,8 @@ def track_demo(video_path = "./Data/benz.mp4" , out_name = 'benz'):
             x.append([round(b) for b in t])
 
         xx = [xx for xx in x if xx[4] == 6][0]
-        cv2.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
+        # cv2.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  ::-1])
         plt.imshow(iframes[i][xx[1]:xx[3],xx[0]:xx[2],  :])
-        plt.show() 
+        plt.show()
+    
 

@@ -1,5 +1,4 @@
 import cv2
-import matplotlib.pyplot as plt
 import time
 from .utils import draw_bbox
 
@@ -31,8 +30,6 @@ def make_tracking_video(frames, tboxes, output_path, fps, draw = True):
       t1 = time.time()    
         # draw detection on frame
       img = draw_bbox(frame, tracked_bboxes, CLASSES=YOLO_COCO_CLASSES, tracking=True)
-      plt.imshow(img[:,:, ::-1])
-      plt.show() 
       t2 = time.time()
       times.append(t2-t1)   
       
@@ -41,7 +38,7 @@ def make_tracking_video(frames, tboxes, output_path, fps, draw = True):
       ms = sum(times)/len(times)*1000
       fps = 1000 / ms    
       
-      img = cv2.putText(img, "Time: {:.1f} FPS".format(fps), (0, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 2)
+      # img = cv2.putText(img, "Time: {:.1f} FPS".format(fps), (0, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 2)
 
       print("Time: {:.2f}ms,  total FPS: {:.1f}".format(ms, fps))
       out.write(img[:, :, ::-1])

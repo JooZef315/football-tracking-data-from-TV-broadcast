@@ -46,6 +46,7 @@ def clean_tracks(tracking_frames, tracking_boxes, ball_only = False):
       new_tframes.append(frame)
       new_tboxes.append(boxes)
 
+  print(f'\n-------------------------------------------------------')
   print(f'number of outliers removed = {out_boxes}')
 
   print(f'length of zoomed out frames = {len(new_tframes)}')
@@ -61,6 +62,7 @@ def clean_tracks(tracking_frames, tracking_boxes, ball_only = False):
 
     print(f'length of frames only with ball tracked = {len(bframes)}')
     print(f'the final zoomed out cut = {round(len(bframes)/len(tracking_frames), 2)*100}% of the original')
+    print(f'-------------------------------------------------------\n')
     return  bframes, bboxes
 
   else:    

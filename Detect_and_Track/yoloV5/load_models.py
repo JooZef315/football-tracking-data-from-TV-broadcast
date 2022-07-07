@@ -19,7 +19,7 @@ def yoloV5l():
     ball_model.classes = [32]
     ball_model.conf = 0.15
     ball_model.max_det  = 1
-    print('\n------------------------------------------------------------\n')
+    print('\n-------------------------------------------------------------------------------------------\n')
 
     return modeli, ball_model
 
