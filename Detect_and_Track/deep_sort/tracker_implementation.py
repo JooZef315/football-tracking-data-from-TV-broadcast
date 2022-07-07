@@ -4,10 +4,11 @@ import cv2
 import numpy as np
 from .utils import read_class_names
 
-import nn_matching
+from .nn_matching import NearestNeighborDistanceMetric
 from .detection import Detection
 from .tracker import Tracker
 from .generate_detections import create_box_encoder
+# import nn_matching
 # import generate_detections as gdet
 
 YOLO_COCO_CLASSES = "./Detect_and_Track/model_data/coco/coco.names"
@@ -47,7 +48,7 @@ def trackingXl5(Yolo_model, ball_model, video_path):
     #initialize deep sort object
     model_filename = 'model_data/mars-small128.pb'
     encoder = create_box_encoder(model_filename, batch_size=1)
-    metric = nn_matching.NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
+    metric = NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
     tracker = Tracker(metric)
    
     if video_path:
