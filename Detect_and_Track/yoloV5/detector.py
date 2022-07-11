@@ -49,7 +49,7 @@ def detectXl5(model ,image_path, show=True):
       plt.imshow(image)
       plt.show()
     else:      
-      image =  original_image    
-    
-    nbboxes = [[int(round(b)) if b > 1 else round(b, 2) for b in list(bbox)] for bbox in bboxes]
+      image =  original_image   
+
+    nbboxes = [[int(round(b)) if b != list(bbox)[4] else round(b, 2) for b in list(bbox)] for bbox in bboxes]    
     return image, nbboxes
