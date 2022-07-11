@@ -21,11 +21,11 @@ def classify_teams(player, color):
   player = cv2.cvtColor(player, cv2.COLOR_RGB2HSV)
   masks = []  
   Hsv_boundaries = [
-      ([0,0,184],[180,70,255], 'white'), #white
+      ([0,0,184],[180,78,255], 'white'), #white
       ([0,0,0],[180,255,65], 'black'), #black
       ([0,120,20],[15,255,255], 'red'), #red
       ([163,100,20],[180,255,255], 'red'), #dark red/ pink
-      ([85,87,20],[130,255,255], 'blue'), #blue
+      ([85,86,20],[130,255,255], 'blue'), #blue
       ([50,100,20],[80,255,255], 'green'), #green
       ([17,150,20],[35,255,255], 'yellow'), #yellow       
       ([131,60,20],[162,255,255], 'purple'), #purple          
