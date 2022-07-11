@@ -65,14 +65,14 @@ from projection_2D.get_tracking_data import get_tracking_data
 
 #call get_init_data function with arguments:
 #TV video path, a name to name output video and the intial dataframe(with unmapped coordinates relative to TV video),
-#and list of tow teams colors as described in create_df.py file
+#and list of two teams colors as described in create_df.py file
 get_init_data(path,out_name,teams_colors)
 
 #the output video with players and ball tracked, and  the intial dataframe would be saved in Out/
 #use them as arguments to get_tracking_data function, to generate the final tracking data dataframe
 
 tracked_frames, bboxes = get_tracking_data(df_path, tracked_video_path, out_name)
-#the output the intial dataframe with players and ball tracked and mapped to 2D pitch would be saved in Out/ too.
+#the output is a dataframe with players and ball tracked and mapped to 2D pitch,  which would be saved in "Out/" too.
 ```
 
 <br >

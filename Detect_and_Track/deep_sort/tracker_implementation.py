@@ -55,7 +55,8 @@ def trackingXl5(Yolo_model, ball_model, video_path):
         vid = cv2.VideoCapture(video_path) # detect on video
 
     fps = int(vid.get(cv2.CAP_PROP_FPS))
-    print(f'fps = {fps}')
+    print(f'fps of the input video = {fps}')
+    print('Please wait ... \n')
     NUM_CLASS = read_class_names(YOLO_COCO_CLASSES)
     key_list = list(NUM_CLASS.keys()) 
     val_list = list(NUM_CLASS.values())
