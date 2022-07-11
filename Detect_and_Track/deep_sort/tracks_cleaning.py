@@ -1,4 +1,4 @@
-def clean_tracks(tracking_frames, tracking_boxes, ball_only = False):
+def clean_tracks(tracking_frames, tracking_boxes, ball_only = True):
   """
     function to:
     ----------
