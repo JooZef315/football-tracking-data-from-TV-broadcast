@@ -100,6 +100,12 @@ from Detect_and_Track.get_tracks import get_video_tracks
 get_video_tracks(video_path, output_video_name)
 ```
 
+<br >
+
+### OR you could generate tracking data, or play with our demo functions using the jupyter notebook.
+
+<br >
+
 # License
 
 This project is licensed under the **MIT** - see the LICENSE file for details
