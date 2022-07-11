@@ -103,7 +103,7 @@ def create_MappingDataFrame(df, video_path, pitch_path = './projection_2D/data/p
     print(f'length of the dataframe to map: {len(df)}') 
     print(f'length of frames: {len(frames)}') 
 
-    df = df[df['frame'] % 5 == 0]
+    df = df[df['frame'] % 6 == 0]
 
     frames_idx = df['frame'].unique().tolist()
     print(f'frames to map: {frames_idx}')
