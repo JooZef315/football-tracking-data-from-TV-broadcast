@@ -30,11 +30,8 @@ def get_video_tracks(video_path , out_name , ball_only = True):
     iframes, itboxes, fps = trackingXl5(modelv5l, ball_modelv5l, video_path)
     ziframes, zitboxes = clean_tracks(iframes, itboxes, ball_only)
    
-    #make plain video
+    #make clean video
     make_tracking_video(ziframes, zitboxes, f'./Out/{out_name}_out.mp4', fps, draw = False)
-
-    #make video with objects tracked
-    make_tracking_video(ziframes, zitboxes, f'./Out/{out_name}_out_tracked.mp4', fps,draw = True)
 
     return ziframes, zitboxes
 
