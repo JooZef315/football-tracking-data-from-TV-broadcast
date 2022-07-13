@@ -4,7 +4,8 @@ from .players_positions import get_positions
 
 def creatInitDataFrame(tracks, frames, frame_colors = None):  
   '''
-  this functions is to decide if the boject is in Attacking team or Defense team, or if it is a ball.
+  this functions is to create initial dataframe, with players coordinates relative to TV video, 
+  and classify them according to teams colors.
 
   Parameters
   ----------
@@ -22,7 +23,7 @@ def creatInitDataFrame(tracks, frames, frame_colors = None):
   Return
   ----------
   df_points : dataframe
-      the dataframe of the the tracked objects objects.
+      the dataframe of the the tracked objects.
       consists of 7 columns:
       1 - frame: the index of the frame in the video
       2 - ID: the ID of the tracked object in the frame
