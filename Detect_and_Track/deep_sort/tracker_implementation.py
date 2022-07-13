@@ -76,8 +76,7 @@ def trackingXl5(Yolo_model, ball_model, video_path):
         results = Yolo_model(original_frame)   
 
         pred_bbox = results.xyxy[0].tolist()
-        bboxes = [np.array(box) for box in pred_bbox]
-        # print(f'number of objects detected = {len(bboxes)}')        
+        bboxes = [np.array(box) for box in pred_bbox]              
 
         # extract bboxes to boxes (x, y, width, height), scores and names
         boxes, scores, names = [], [], []

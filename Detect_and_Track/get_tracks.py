@@ -3,7 +3,7 @@ from .deep_sort.tracks_cleaning import clean_tracks
 from .deep_sort.tracking_video import make_tracking_video
 from .yoloV5.load_models import yoloV5l
 
-def get_video_tracks(video_path = "./Data/benz.mp4" , out_name = 'benz', ball_only = True):   
+def get_video_tracks(video_path , out_name , ball_only = True):   
     '''
     this functions is to implement tracking players and the ball in the video.
 
