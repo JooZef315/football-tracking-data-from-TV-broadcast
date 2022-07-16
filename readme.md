@@ -2,6 +2,10 @@
 
 This repo for extracting tracking data from broadcast TV feed using AI to analyze football matches in 3 main steps
 
+<div align="center">
+<img src="./readme/di.JPG" alt="digram" width="600"/>
+</div>
+
 ### 1 - Players / ball **Detection**
 
 we used YOLOv5 PyTorch Hub inference, to load pretrained **YoloV5l** model,
@@ -107,7 +111,9 @@ create_tracking_boxes_video(video_path, output_video_name)
 
 <br >
 
-### OR you could generate tracking data, or play with our demo functions using the jupyter notebook.
+#### you could generate tracking data,
+
+#### or play with our demo functions using the jupyter **notebook** provided here.
 
 <br >
 

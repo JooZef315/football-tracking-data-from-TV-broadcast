@@ -4,13 +4,14 @@ pandas
 matplotlib
 imageio
 Pillow
-opencv-python==4.1.2.30
+opencv-python
 PyYAML
-torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
-#torchvision==0.12
-#torchaudio==0.11
-tensorflow==2.3.1
-tensorflow-gpu==2.3.1
+seaborn
+torch==1.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+torchvision==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113
+torchaudio==0.11.0 
+tensorflow
+tensorflow-gpu
 tqdm==4.43.0
 requests
 protobuf<4.21.3
@@ -20,7 +21,5 @@ urllib3
 mss
 scikit-learn==0.19.2 
 ipython
-pycopy-errno
-pycopy-colorsys
 tables
 kornia
