@@ -23,7 +23,7 @@ wget
 awscli
 urllib3
 mss
-scikit-learn==0.19.2 
+scikit-learn 
 ipython
 tables
 kornia
